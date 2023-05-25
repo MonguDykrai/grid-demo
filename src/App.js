@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Stage from './Stage.js';
 import './style.css';
 
 export default function App() {
+  const container = useRef();
   const [type, setType] = useState(1);
   return (
     <div>
@@ -40,7 +41,17 @@ export default function App() {
           地址2
         </li>
       </ol>
-      <div className="container">
+      <div style={{ marginBottom: 14 }}>
+        <button
+          onClick={() =>
+            container.current?.requestFullscreen &&
+            container.current?.requestFullscreen()
+          }
+        >
+          全屏
+        </button>
+      </div>
+      <div className="container" ref={container}>
         <Stage type={type} />
       </div>
     </div>

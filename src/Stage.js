@@ -1,10 +1,11 @@
 import React from 'react';
+import classNames from 'classnames';
 import './style.css';
 
-const Stage = () => {
+const Stage = ({ type }) => {
   return (
     <>
-      <div className="stage stage-9">
+      <div className={classNames('stage', `stage-${type}`)}>
         <div>screen 1</div>
         <div>screen 2</div>
         <div>screen 3</div>

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --grid-gap: 8px; /* 列、行间距 */
+}
+
 ul {
   display: flex;
   list-style: none;
@@ -26,10 +30,16 @@ button:active {
   opacity: 0.4;
 }
 
+.container {
+  background: #666;
+  padding: calc(16px - var(--grid-gap)) 12px;
+  padding-bottom: calc(44px - var(--grid-gap));
+}
+
 .stage {
   background: rgba(100, 200, 0, 0.4);
   height: 600px;
-  border: 4px solid pink;
+  /* border: 10px solid pink; */
   overflow: hidden;
 }
 
@@ -45,7 +55,7 @@ button:active {
 
 /* 通过 margin 模拟 gap，不是最优但基本可以达到效果 */
 .stage > div {
-  margin: 8px;
+  margin: var(--grid-gap);
 }
 
 .stage-1 {

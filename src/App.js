@@ -20,7 +20,9 @@ export default function App() {
           <button onClick={() => setType(16)}>16</button>
         </li>
       </ul>
-      <Stage type={type} />
+      <div className="container">
+        <Stage type={type} />
+      </div>
     </div>
   );
 }

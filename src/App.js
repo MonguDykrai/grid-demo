@@ -50,6 +50,15 @@ export default function App() {
         >
           全屏
         </button>
+        <button
+          onClick={() =>
+            window.alert(
+              '清除全部设备，为什么没做实现？App组件内无法 setScreens，暂时先不处理了'
+            )
+          }
+        >
+          清除全部设备
+        </button>
       </div>
       <div className="container" ref={container}>
         <Stage type={type} />

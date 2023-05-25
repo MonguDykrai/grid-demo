@@ -6,7 +6,16 @@ const Stage = ({ type }) => {
   return (
     <>
       <div className={classNames('stage', `stage-${type}`)}>
-        <div>screen 1</div>
+        <div>
+          <video
+            src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+            style={{ width: '100%', height: '100%' }}
+            controls
+            autoplay
+            muted
+          />
+        </div>
+        {/* <div>screen 1</div> */}
         <div>screen 2</div>
         <div>screen 3</div>
         <div>screen 4</div>

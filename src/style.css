@@ -29,11 +29,13 @@
 .stage-9 {
   /* grid-template-columns: repeat(3, 1fr); */
   /* grid-template-columns: repeat(3, 33.33%); */
-  grid-template-columns: 33.33% 33.33% 33.33%;
+  /* grid-template-columns: 33.33% 33.33% 33.33%; */
+  grid-template-columns: calc(33.33% - 10px) calc(33.33% - 10px) calc(33.33%);
 
   /* grid-template-rows: repeat(3, 1fr); */
   /* grid-template-columns: repeat(3, 33.33%); */
-  grid-template-rows: 33.33% 33.33% 33.33%;
+  /* grid-template-rows: 33.33% 33.33% 33.33%; */
+  grid-template-rows: calc(33.33% - 10px) calc(33.33% - 10px) calc(33.33%);
   grid-gap: 10px;
 }
 

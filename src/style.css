@@ -14,6 +14,19 @@ ul {
   margin: 0 0 16px 0;
 }
 
+ol {
+  margin-bottom: 20px;
+  display: flex;
+  list-style: none;
+  user-select: none;
+  /* cursor: pointer; */
+}
+
+ol li {
+  width: 92px;
+  box-shadow: 2px 2px orange;
+}
+
 button {
   all: unset;
 }
